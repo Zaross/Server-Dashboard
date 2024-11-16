@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>02143555-aa35-4d26-9c35-5fd4e3efede3</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Server_Dashboard_Dashboard.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Server_Dashboard_Dashboard.py" />
+    <Compile Include="database\create_database.py" />
+    <Compile Include="api\login.py" />
+    <Compile Include="main.py" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="S:\venv\Server-Dashboard-Dashboard\">
@@ -37,6 +39,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="webroot\css\main.css" />
+    <Content Include="webroot\html\startpage.html" />
+    <Content Include="webroot\index.html" />
+    <Content Include="webroot\js\loading-animation.js" />
+    <Content Include="webroot\js\login-animation.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="functions\" />
+    <Folder Include="database\" />
+    <Folder Include="databases\" />
+    <Folder Include="api\" />
+    <Folder Include="webroot\" />
+    <Folder Include="webroot\html\" />
+    <Folder Include="webroot\js\" />
+    <Folder Include="webroot\css\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

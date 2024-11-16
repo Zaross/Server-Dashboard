@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Dashboard</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Server Dashboard</h1>
+        <div class="stats">
+            <canvas id="roleChart" width="400" height="400"></canvas>
+        </div>
+    </div>
+
+    <script>
+        async function fetchStats() {
+            const response = await fetch("/api/stats");
+            const data = await response.json();
+
+            // Kreisdiagramm erstellen
+            const ctx = document.getElementById('roleChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: Object.keys(data.roles),
+                    datasets: [{
+                        label: 'User Roles',
+                        data: Object.values(data.roles),
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                    }]
+                },
+            });
+        }
+        fetchStats();
+    </script>
+</body>
+</html>

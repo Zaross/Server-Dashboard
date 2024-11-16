@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login-container {
+    background-color: #161b22;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 400px;
+    position: relative;
+}
+
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-size: 1rem;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #58a6ff;
+    box-shadow: 0 0 8px rgba(88, 166, 255, 0.8);
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #238636;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-container button:hover {
+    background-color: #2ea043;
+    transform: translateY(-2px);
+}
+
+.login-container .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.login-container .links a {
+    color: #58a6ff;
+    font-size: 0.95rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.login-container .links a:hover {
+    color: #79c0ff;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.login-container .remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #8b949e;
+}
+
+.login-container .remember-me input {
+    margin-right: 0.5rem;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+.login-container footer {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #6e7681;
+    text-align: center;
+    line-height: 1.4;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.login-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.login-form {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+

@@ -1,16 +1,15 @@
 pip==23.2.1
-fastapi==0.95.2  # API Backend für das Dashboard
-jinja2==3.1.2  # HTML-Rendering
-sqlalchemy==1.4.36  # MySQL und SQLite Unterstützung
-databases==0.5.5  # Asynchrone Datenbankverbindungen
-PyJWT==2.4.0  # JWT für Authentifizierung
-passlib[bcrypt]==1.7.4  # Passwort-Hashing
-paramiko==2.10.1  # SSH und SFTP
-asyncssh==2.9.0  # Asynchrone SSH-Unterstützung
-websockets==10.3  # WebSocket-Kommunikation für SSH-Terminal-Streaming
-requests==2.28.1  # HTTP-Anfragen
-docker==5.0.3  # Docker SDK für Container-Verwaltung
+fastapi==0.95.2
+jinja2==3.1.2
+sqlalchemy==1.4.36
+databases==0.5.5
+PyJWT==2.4.0
+passlib[bcrypt]==1.7.4
+paramiko==2.10.1
+asyncssh==2.9.0
+websockets==10.3
+requests==2.28.1
 uvicorn[standard]
-cloudflare==2.9.16  # Cloudflare API für Zero Trust Tunnel
-httpx==0.23.0  # Asynchroner HTTP-Client für performante Anfragen
-redis==4.3.1  # Redis für Caching und Sitzungsmanagement
+cloudflare==3.1.0
+httpx==0.23.0
+redis==4.3.1
